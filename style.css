@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+li {
+  list-style: none;
+}
+
+input,
+button {
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+.overlay {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  opacity: 0.2;
+  display: none;
+  top: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 40px 20px;
+}
+.container nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+.container nav ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  right: 0;
+  height: 100vh;
+  width: 70%;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+  top: 0;
+  box-shadow: 0 0 0 40px white;
+  display: none;
+  z-index: 3;
+}
+.container nav .logo {
+  height: 100%;
+}
+.container nav .close {
+  display: none;
+  z-index: 5;
+  cursor: pointer;
+  font-size: 3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.container nav .burger {
+  z-index: 2;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.container .hero {
+  padding-block: 20px;
+}
+.container .hero .heroContent img {
+  width: 100%;
+}
+.container .hero .heroContent .heroText h1 {
+  font-size: 3rem;
+}
+.container .hero .heroContent .heroText p {
+  color: hsl(236deg, 13%, 42%);
+  line-height: 25px;
+  font-size: 1.1rem;
+  padding-block: 10px;
+}
+.container .hero .heroContent .heroText button {
+  border: 1px;
+  outline: none;
+  color: white;
+  background-color: hsl(5deg, 85%, 63%);
+  padding: 15px 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-block: 10px;
+}
+.container .hero .news {
+  background-color: hsl(240deg, 100%, 5%);
+  color: white;
+  padding: 20px;
+  display: grid;
+  gap: 30px;
+  margin-block: 50px;
+}
+.container .hero .news h1 {
+  color: hsl(35deg, 77%, 62%);
+}
+.container .hero .news .new {
+  display: grid;
+  gap: 10px;
+}
+.container .hero .news .new h1 {
+  color: white;
+}
+.container .hero .news .new p {
+  color: hsl(233deg, 8%, 79%);
+  line-height: 30px;
+}
+.container .services {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.container .services .service {
+  display: flex;
+  gap: 30px;
+}
+.container .services .service img {
+  width: 60%;
+}
+.container .services .service .serviceContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .services .service .serviceContent .num {
+  color: hsl(233deg, 8%, 79%);
+  font-size: 3rem;
+  font-weight: 700;
+}
+.container .services .service .serviceContent h1 {
+  color: hsl(240deg, 100%, 5%);
+  font-size: 1.3rem;
+}
+.container .services .service .serviceContent p {
+  color: hsl(236deg, 13%, 42%);
+  line-height: 30px;
+}
+
+@media screen and (min-width: 900px) {
+  .burger {
+    display: none;
+  }
+  .container {
+    padding: 50px 100px;
+  }
+  .container nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    position: static;
+    box-sizing: unset;
+    z-index: auto;
+    height: auto;
+    width: auto;
+  }
+  .container nav ul li {
+    cursor: pointer;
+  }
+  .container .hero {
+    display: flex;
+    gap: 20px;
+  }
+  .container .hero .heroContent img {
+    border: 10px solid white;
+  }
+  .container .hero .heroContent .heroText {
+    display: flex;
+  }
+  .container .hero .heroContent .heroText h1 {
+    width: 50%;
+  }
+  .container .hero .heroContent .heroText .heroPar {
+    width: 50%;
+  }
+  .container .hero .news {
+    margin: 0;
+  }
+  .container .services {
+    flex-direction: row;
+    gap: 0;
+    margin-top: 50px;
+    justify-content: space-between;
+  }
+  .container .services .service img {
+    width: 80%;
+  }
+  hr {
+    border: none;
+    background-color: hsl(233deg, 8%, 79%);
+  }
+}/*# sourceMappingURL=style.css.map */

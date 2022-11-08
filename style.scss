@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+$SoftOrange: hsl(35, 77%, 62%);
+$SoftRed: hsl(5, 85%, 63%);
+$Off-white: hsl(36, 100%, 99%);
+$GrayishBlue: hsl(233, 8%, 79%);
+$DarkGrayishBlue: hsl(236, 13%, 42%);
+$VeryDarkBlue: hsl(240, 100%, 5%);
+$TheFont: 'Inter', sans-serif;
+
+li {
+    list-style: none;
+}
+
+input,
+button {
+    font-family: $TheFont;
+    cursor: pointer;
+}
+
+.overlay {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    opacity: 0.2;
+    display: none;
+    top: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $TheFont;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 40px 20px;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            background-color: white;
+            right: 0;
+            height: 100vh;
+            width: 70%;
+            justify-content: center;
+            gap: 30px;
+            padding: 30px;
+            top: 0;
+            box-shadow: 0 0 0 40px white;
+            display: none;
+            z-index: 3;
+        }
+
+        .logo {
+            height: 100%;
+        }
+
+        .close {
+            display: none;
+            z-index: 5;
+            cursor: pointer;
+            font-size: 3rem;
+            user-select: none;
+        }
+
+        .burger {
+            z-index: 2;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+
+    .hero {
+        padding-block: 20px;
+
+        .heroContent {
+            img {
+                width: 100%;
+            }
+
+            .heroText {
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    color: $DarkGrayishBlue;
+                    line-height: 25px;
+                    font-size: 1.1rem;
+                    padding-block: 10px;
+                }
+
+                button {
+                    border: 1px;
+                    outline: none;
+                    color: white;
+                    background-color: $SoftRed;
+                    padding: 15px 30px;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    margin-block: 10px;
+                }
+            }
+        }
+
+        .news {
+            background-color: $VeryDarkBlue;
+            color: white;
+            padding: 20px;
+            display: grid;
+            gap: 30px;
+            margin-block: 50px;
+
+            h1 {
+                color: $SoftOrange;
+            }
+
+            .new {
+                display: grid;
+                gap: 10px;
+
+                h1 {
+                    color: white;
+                }
+
+                p {
+                    color: $GrayishBlue;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .service {
+            display: flex;
+            gap: 30px;
+
+            img {
+                width: 60%;
+            }
+
+            .serviceContent {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .num {
+                    color: $GrayishBlue;
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+
+                h1 {
+                    color: $VeryDarkBlue;
+                    font-size: 1.3rem;
+                }
+
+                p {
+                    color: $DarkGrayishBlue;
+                    line-height: 30px;
+
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (min-width:900px) {
+    .burger {
+        display: none;
+    }
+
+    .container {
+        padding: 50px 100px;
+
+        nav {
+            ul {
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                margin: 0;
+                background-color: transparent;
+                position: static;
+                box-sizing: unset;
+                z-index: auto;
+                height: auto;
+                width: auto;
+
+                li {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .hero {
+            display: flex;
+            gap: 20px;
+            .heroContent{
+                img{
+                    border: 10px solid white;
+                }
+                .heroText {
+                    display: flex;
+    
+                    h1 {
+                        width: 50%;
+                    }
+    
+                    .heroPar {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .news {
+                margin: 0;
+
+            }
+        }
+
+        .services {
+            flex-direction: row;
+            gap: 0;
+            margin-top: 50px;
+            justify-content: space-between;
+            .service{
+                img{
+                    width: 80%;
+                }
+            }
+        }
+
+    }
+
+    hr {
+        border: none;
+        background-color: $GrayishBlue;
+    }
+}
