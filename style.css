@@ -176,6 +176,10 @@ body {
   }
   .container nav ul li {
     cursor: pointer;
+    transition: all ease 0.3s;
+  }
+  .container nav ul li:hover {
+    color: hsl(5deg, 85%, 63%);
   }
   .container .hero {
     display: flex;
@@ -186,27 +190,43 @@ body {
   }
   .container .hero .heroContent .heroText {
     display: flex;
+    justify-content: space-between;
+    gap: 100px;
   }
   .container .hero .heroContent .heroText h1 {
     width: 50%;
+    font-size: 4rem;
   }
   .container .hero .heroContent .heroText .heroPar {
     width: 50%;
+  }
+  .container .hero .heroContent .heroText button {
+    transition: 0.3s;
+  }
+  .container .hero .heroContent .heroText button:hover {
+    cursor: pointer;
+    background-color: hsl(240deg, 100%, 5%);
   }
   .container .hero .news {
     margin: 0;
   }
   .container .services {
     flex-direction: row;
-    gap: 0;
+    gap: 180px;
     margin-top: 50px;
     justify-content: space-between;
   }
   .container .services .service img {
-    width: 80%;
+    width: 100%;
+  }
+  .container .services .service .serviceContent h1:hover {
+    color: hsl(5deg, 85%, 63%);
   }
   hr {
     border: none;
     background-color: hsl(233deg, 8%, 79%);
+  }
+  br {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

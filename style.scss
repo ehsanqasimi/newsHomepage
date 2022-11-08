@@ -211,6 +211,10 @@ body {
 
                 li {
                     cursor: pointer;
+                    transition: all ease .3s;
+                    &:hover{
+                        color: $SoftRed;
+                    }
                 }
             }
         }
@@ -224,31 +228,42 @@ body {
                 }
                 .heroText {
                     display: flex;
-    
+                    justify-content: space-between;
+                    gap: 100px;
                     h1 {
                         width: 50%;
+                        font-size: 4rem;
                     }
     
                     .heroPar {
                         width: 50%;
+                    }
+                    button{
+                        transition: .3s;
+                    }
+                    button:hover{
+                        cursor: pointer;
+                        background-color: $VeryDarkBlue;
                     }
                 }
             }
 
             .news {
                 margin: 0;
-
             }
         }
 
         .services {
             flex-direction: row;
-            gap: 0;
+            gap: 180px;
             margin-top: 50px;
             justify-content: space-between;
             .service{
                 img{
-                    width: 80%;
+                    width: 100%;
+                }
+                .serviceContent h1:hover{
+                    color: $SoftRed;
                 }
             }
         }
@@ -258,5 +273,8 @@ body {
     hr {
         border: none;
         background-color: $GrayishBlue;
+    }
+    br{
+        display: none;
     }
 }
